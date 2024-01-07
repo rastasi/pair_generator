@@ -1,6 +1,8 @@
 from person import Person
 from generator import Generator
 from person_printer import PersonPrinter
+from gift import Gift
+
 import random
 
 people = [
@@ -12,5 +14,13 @@ people = [
 
 # Generator(people).run()
 
-p = PersonPrinter(people)
-p.run()
+# p = PersonPrinter(people)
+# p.run()
+
+gifts = [
+    Gift("piros zokni"),
+    Gift("pottyos zokni"),
+]
+
+for gift in gifts:
+    print(gift.get_name())

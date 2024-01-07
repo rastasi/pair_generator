@@ -10,12 +10,10 @@ class Generator:
 
     def print_data(self):
         for person in self.people:
-            person = self.people[i]
             print(f"{person.get_full_name()} - {person.gift_giver.get_full_name()}")
             
     def reset(self):
         for person in self.people:
-            person = self.people[i]
             person.set_gift_giver(None)
             person.set_gifted_person(None)
             
@@ -28,8 +26,7 @@ class Generator:
     def get_gift_giver(self, person):
         gift_givers = self.people.copy()
         random.shuffle(gift_givers)
-        for person in self.people:
-            gift_giver = gift_givers[i]
+        for gift_giver in gift_givers:
             if gift_giver != person and not gift_giver.has_gifted_person():
                 return gift_giver
 
